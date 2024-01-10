@@ -1,5 +1,5 @@
 export type dataType<T> = {
-  code: number;
-  msg: string;
-  data: T;
-};
+  code: string | number
+  msg: string
+  result: T
+}

@@ -1,7 +1,7 @@
 // src/types/components.d.ts
-import UTest from '@/components/u-test/index.vue'
+import uSwiper from '@/components/u-swiper.vue'
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    UTest: typeof UTest
+    uSwiper: typeof uSwiper
   }
 }
