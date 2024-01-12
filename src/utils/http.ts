@@ -1,4 +1,4 @@
-import { useUserStore } from '@/stores/user'
+import { useUserStore } from '@/stores/modules/user'
 import type { dataType } from './types/responseDataType'
 // 接口的公共地址
 const baseURL = 'https://pcapi-xiaotuxian-front-devtest.itheima.net'
@@ -17,8 +17,8 @@ const httpInterceptor = {
 
     // 发送token
     const store = useUserStore()
-    if (store.token) {
-      config.header.Authorization = store.token
+    if (store.userInfo?.token) {
+      config.header.Authorization = store.userInfo.token
     }
 
     return config
